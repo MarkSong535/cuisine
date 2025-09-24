@@ -27,14 +27,10 @@
     {% set tag_items = ns.tag_map|dictsort(case_sensitive=False) %}
     <nav class="tags-toc" aria-label="Tags table of contents">
       <strong class="tags-toc__title">所有分类</strong>
-      <ul class="tags-toc__list">
         {% for tag, pages in tag_items %}
-          <li class="tags-toc__item">
-            <a href="#{{ tag_slug(tag) }}">{{ tag }}</a>
-            <span class="tags-toc__count">{{ pages|length }}</span>
-          </li>
+          <a href="#{{ tag_slug(tag) }}" class="tag-pill">{{ tag }}<span class="tags-toc__count">{{ pages|length }}</span></a>
+          
         {% endfor %}
-      </ul>
     </nav>
 
     {# -------- Full sections -------- #}

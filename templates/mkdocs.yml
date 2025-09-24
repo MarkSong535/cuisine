@@ -1,11 +1,9 @@
 site_name: 食谱
 nav:
-  - Home: index.md
-  - 食谱:
-    - 分类: tags.md
-    - LOCATION
+  - 分类: tags.md
+  - LOCATION
 theme:
-  language: en
+  language: zh
   custom_dir: theme/overrides
   name: "material"
   logo: "https://img-mst.marksong.tech/logo_mim_round.png"
@@ -38,14 +36,13 @@ theme:
   features:
     - navigation.indexes
     - content.tooltips
-    - navigation.tabs
     - content.code.copy
     - navigation.path
     - navigation.instant
     - navigation.instant.prefetch
     - content.code.select
     - content.code.copy
-site_url: https://cuisine.marksong.tech/
+site_url: https://cuisine.marksong.tech/tags/
 plugins:
   - git-revision-date-localized:
       type: date
@@ -64,7 +61,7 @@ extra:
     provider: google
     property: G-TX6850TH07
   generator: false
-  homepage: https://cuisine.marksong.tech/
+  homepage: https://cuisine.marksong.tech/tags/
 markdown_extensions:
   - tables
   - pymdownx.emoji:
