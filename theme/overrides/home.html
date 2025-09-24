@@ -1,0 +1,147 @@
+{% extends "base.html" %}  {% block extrahead %}
+
+<link
+  rel="apple-touch-icon"
+  sizes="57x57"
+  href="https://img-mst.marksong.tech/apple-icon-57x57.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="60x60"
+  href="https://img-mst.marksong.tech/apple-icon-60x60.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="72x72"
+  href="https://img-mst.marksong.tech/apple-icon-72x72.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="76x76"
+  href="https://img-mst.marksong.tech/apple-icon-76x76.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="114x114"
+  href="https://img-mst.marksong.tech/apple-icon-114x114.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="120x120"
+  href="https://img-mst.marksong.tech/apple-icon-120x120.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="https://img-mst.marksong.tech/apple-icon-144x144.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="https://img-mst.marksong.tech/apple-icon-152x152.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="https://img-mst.marksong.tech/apple-icon-180x180.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="https://img-mst.marksong.tech/android-icon-192x192.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="https://img-mst.marksong.tech/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="https://img-mst.marksong.tech/favicon-96x96.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="https://img-mst.marksong.tech/favicon-16x16.png"
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="https://img-mst.marksong.tech/favicon.ico"
+/>
+<link
+  rel="mask-icon"
+  href="https://img-mst.marksong.tech/safari-pinned-tab.svg"
+  color="#204560"
+/>
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#204560">
+
+{% endblock %}
+
+
+{% block site_meta %}
+<meta name="msapplication-TileColor" content="#204560" />
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+</style>
+<script>
+  (__md_scope = new URL("/", location)),
+    (__md_hash = (e) =>
+      [...e].reduce((e, _) => (e << 5) - e + _.charCodeAt(0), 0)),
+    (__md_get = (e, _ = localStorage, t = __md_scope) =>
+      JSON.parse(_.getItem(t.pathname + "." + e))),
+    (__md_set = (e, _, t = localStorage, a = __md_scope) => {
+      try {
+        t.setItem(a.pathname + "." + e, JSON.stringify(_));
+      } catch (e) {}
+    });
+</script>
+
+<style>
+  .md__input_div {
+    border-radius: 25px;
+    border: 2px solid var(--md-primary-fg-color);
+    width: 55%;
+  }
+
+  .md__input {
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    height: 100%;
+    position: relative;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 59.9375em) {
+    .md__input {
+      font-size: 0.9rem;
+      height: 2.4rem;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 60em) {
+    .md__input {
+      font-size: 0.8rem;
+    }
+  }
+
+  .hidden {
+    display: none !important;
+  }
+</style>
+{{ super() }}
+<!-- Add scripts that need to run afterwards here -->
+{% endblock %}

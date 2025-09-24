@@ -1,0 +1,4 @@
+site
+.cache
+mkdocs.yml
+docs/index.md

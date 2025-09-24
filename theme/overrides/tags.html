@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% from "partials/tags_macros.html" import tag_slug %}
+
+{% block content %}
+  <h1>分类</h1>
+
+  {% set ns = namespace(tag_map={}) %}
+  {% for p in nav.pages %}
+    {% if p.meta and p.meta.tags %}
+      {% for t in p.meta.tags %}
+        {% set tag = t|string %}
+        {% set _ = (ns.tag_map.setdefault(tag, [])).append(p) %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  {% if ns.tag_map %}
+    {% for tag, pages in ns.tag_map|dictsort(case_sensitive=False) %}
+      <h2 id="{{ tag_slug(tag) }}">{{ tag }} ({{ pages|length }})</h2>
+      <ul>
+        {% for p in pages|sort(attribute='title') %}
+          <li><a href="{{ p.url | url }}">{{ p.title or p.file.src_path }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% else %}
+    <p><em>No tagged pages yet. Add <code>tags:</code> in your pages’ front matter.</em></p>
+  {% endif %}
+{% endblock %}

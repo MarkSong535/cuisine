@@ -1,0 +1,10 @@
+{% macro tag_slug(tag) -%}
+{{- tag|string|lower
+      |replace(' ', '-')
+      |replace('/', '-')
+      |replace('&', 'and') -}}
+{%- endmacro %}
+
+{% macro tag_href(tag) -%}
+{{ 'tags/' | url }}#{{ tag_slug(tag) }}
+{%- endmacro %}
