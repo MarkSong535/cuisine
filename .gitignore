@@ -2,4 +2,3 @@ site
 .cache
 mkdocs.yml
 !templates/mkdocs.yml
-docs/index.md
