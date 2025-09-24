@@ -1,0 +1,72 @@
+site_name: 食谱
+nav:
+  - Home: index.md
+  - 食谱:
+    - 分类: tags.md
+    - LOCATION
+theme:
+  language: en
+  custom_dir: theme/overrides
+  name: "material"
+  logo: "https://img-mst.marksong.tech/logo_mim_round.png"
+  favicon: "https://img-mst.marksong.tech/favicon.ico"
+  icon:
+    annotation: material/lightbulb-on-10
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: custom
+      scheme: light
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: custom
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.indexes
+    - content.tooltips
+    - navigation.tabs
+    - content.code.copy
+    - navigation.path
+    - navigation.instant
+    - navigation.instant.prefetch
+    - content.code.select
+    - content.code.copy
+site_url: https://cuisine.marksong.tech/
+plugins:
+  - git-revision-date-localized:
+      type: date
+      exclude:
+        - index.md
+        - 404.md
+      enable_creation_date: true
+      strict: true
+  - search
+  - macros
+  - tags:
+      tags: false
+      listing: false
+extra:
+  analytics:
+    provider: google
+    property: G-TX6850TH07
+  generator: false
+  homepage: https://cuisine.marksong.tech/
+markdown_extensions:
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
