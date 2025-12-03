@@ -1,4 +1,6 @@
 site_name: 食谱
+repo_url: https://github.com/MarkSong535/cuisine
+repo_name: MarkSong535/cuisine
 nav:
   - 分类: tags.md
   - LOCATION
